@@ -1,28 +1,31 @@
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
-int main(){
+int main() {
+    int chosenNumber = 7;
+    int userGuess = 0;
+    vector<int> guesses;
 
-   long keyNumber=787406589;
-   int phoneNumbers[3];
-   int i=0;
-   //filling numbers
-   do{
+    while (userGuess != chosenNumber) {
+        cout << "Enter your guess: ";
+        cin >> userGuess;
 
-      cout<<"Enter your phone number"<<endl;
-      cin>>phoneNumbers[i];
-      i=i+1;
-   }
-    while(i<3);
-    //linear search
-    //number Esther
-    for(int i=0;i<3;i++){
+        guesses.push_back(userGuess);
 
-        if(phoneNumbers[i]==keyNumber){
-            cout<< "Esther number's found"<<endl;
-        break;
+        if (userGuess > chosenNumber) {
+            cout << "Too high" << endl;
+        } else if (userGuess < chosenNumber) {
+            cout << "Too low" << endl;
+        } else {
+            cout << "Correct!" << endl;
+        }
     }
+
+    cout << "\nAll guesses:" << endl;
+    for (int i = 0; i < guesses.size(); i++) {
+        cout << guesses[i] << endl;
     }
+
     return 0;
 }
