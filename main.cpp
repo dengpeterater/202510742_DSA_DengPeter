@@ -2,27 +2,28 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
+    int arr[4]={16,28,9,10};
 
-   long keyNumber=787406589;
-   int phoneNumbers[3];
-   int i=0;
-   //filling numbers
-   do{
-
-      cout<<"Enter your phone number"<<endl;
-      cin>>phoneNumbers[i];
-      i=i+1;
-   }
-    while(i<3);
-    //linear search
-    //number Esther
-    for(int i=0;i<3;i++){
-
-        if(phoneNumbers[i]==keyNumber){
-            cout<< "Esther number's found"<<endl;
-        break;
+    int n=4;
+    cout<<"before sorting"<<endl;
+    for(int i=0;i<4;i++){
+        cout<<arr[i]<<endl;
     }
-    }
-    return 0;
-}
+       cout<<"after swapping"<<endl;
+       for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            if(arr[j]>arr[j+1]){
+                int temp=arr[j]=arr[j+1];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+            }
+        }
+          for(int i=0;i<4;i++){
+            cout<<arr[i]<<endl;
+            return 0;
+
+          }
+       }
