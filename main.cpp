@@ -1,40 +1,19 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main() {
+    int matrix[3][2] = {
+        {1, 2},
+        {3, 4},
+        {5, 6}
+    };
 
-    // Sorted names
-    string names[] = {"Amjed", "Anne", "Emely", "Esther", "Manar", "Shayd", "Zuck"};
-    int ages[] = {28, 25, 19, 22, 30, 35, 40};
-
-    int n = 7;
-    string key;
-
-    cout << "Enter name to search: ";
-    cin >> key;
-
-    int low = 0, high = n - 1;
-    bool found = false;
-
-    while (low <= high) {
-        int mid = (low + high) / 2;
-
-        if (names[mid] == key) {
-            cout << names[mid] << " was found and is aged " << ages[mid] << endl;
-            found = true;
-            break;
+    // Display the matrix
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 2; j++) {
+            cout << matrix[i][j] << " ";
         }
-        else if (key < names[mid]) {
-            high = mid - 1;
-        }
-        else {
-            low = mid + 1;
-        }
-    }
-
-    if (!found) {
-        cout << "Not found" << endl;
+        cout << endl;
     }
 
     return 0;
