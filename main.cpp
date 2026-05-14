@@ -1,15 +1,9 @@
-#include <stdio.h>
+int add(int a, int b); // declaration
 
-int fibonacci(int n) {
-    if (n <= 1)
-        return n;
-    return fibonacci(n - 1) + fibonacci(n - 2);
+int add(int a, int b) { // definition
+    return a + b;
 }
 
 int main() {
-    int n = 6;
-    for(int i = 0; i < n; i++) {
-        printf("%d ", fibonacci(i));
-    }
-    return 0;
+    int result = add(2, 3); // function call
 }
