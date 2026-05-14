@@ -1,13 +1,11 @@
 #include <stdio.h>
 
-void congratulate() {
-    char name[50];
-    printf("Enter your name: ");
-    scanf("%s", name);
-    printf("Congratulations %s!\n", name);
+float addFour(float a, float b, float c, float d) {
+    return a + b + c + d;
 }
 
 int main() {
-    congratulate();
+    float result = addFour(1.2, 2.3, 3.4, 4.5);
+    printf("Sum = %.2f\n", result);
     return 0;
 }
