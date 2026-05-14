@@ -1,11 +1,15 @@
 #include <stdio.h>
 
-float addFour(float a, float b, float c, float d) {
-    return a + b + c + d;
+int fibonacci(int n) {
+    if (n <= 1)
+        return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 int main() {
-    float result = addFour(1.2, 2.3, 3.4, 4.5);
-    printf("Sum = %.2f\n", result);
+    int n = 6;
+    for(int i = 0; i < n; i++) {
+        printf("%d ", fibonacci(i));
+    }
     return 0;
 }
